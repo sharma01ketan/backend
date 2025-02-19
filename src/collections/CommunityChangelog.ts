@@ -44,22 +44,25 @@ export const Community: CollectionConfig = {
                 slug: 'Cta',
                 fields: [
                   {
-                    name: 'title',
+                    name: 'ctatitle',
                     type: 'text',
                   },
                   {
-                    name: 'icon',
+                    name: 'ctaicon',
                     type: 'select',
                     options: ['Zap', 'Lens', 'Info', 'Idea', 'Announce'],
                   },
                   {
-                    name: 'color',
+                    name: 'ctacolor',
                     type: 'select',
                     options: ['Yellow', 'Blue', 'Green', 'Red'],
                   },
                   {
-                    name: 'description',
+                    name: 'ctadescription',
                     type: 'richText',
+                    editor: lexicalEditor({
+                      features: ({ defaultFeatures }) => defaultFeatures,
+                    }),
                   },
                 ],
               },
